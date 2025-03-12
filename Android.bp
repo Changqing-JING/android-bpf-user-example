@@ -1,0 +1,155 @@
+cc_binary {
+    name: "bpfuser",
+    srcs: ["bpfuser.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbpf_bcc",
+        "libbpf_minimal",
+        "liblog",
+    ],
+    header_libs: [
+        "bpf_prog_headers",
+        "bpf_headers",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ],
+    vendor: true
+}
+
+cc_binary {
+    name: "bpfbinderuser",
+    srcs: ["bpfbinderuser.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbpf_bcc",
+        "libbpf_minimal",
+        "liblog",
+    ],
+    header_libs: [
+        "bpf_prog_headers",
+        "bpf_headers",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ],
+    vendor: true
+}
+
+cc_binary {
+    name: "bpfputsuser",
+    srcs: ["bpfputsuser.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbpf_bcc",
+        "libbpf_minimal",
+        "liblog",
+    ],
+    header_libs: [
+        "bpf_prog_headers",
+        "bpf_headers",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ],
+    vendor: true
+}
+
+cc_binary {
+    name: "bpfkprobeuser",
+    srcs: ["bpfkprobeuser.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbpf_bcc",
+        "libbpf_minimal",
+        "liblog",
+    ],
+    header_libs: [
+        "bpf_prog_headers",
+        "bpf_headers",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ],
+    vendor: true
+}
+
+cc_binary {
+    name: "hello",
+    srcs: ["hello.cpp"],
+    shared_libs: [
+        "libbase",
+    ],
+    
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ],
+    //vendor: true
+}
+
+cc_binary {
+    name: "bpflibhwuiuser",
+    srcs: ["bpflibhwuiuser.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbpf_bcc",
+        "libbpf_minimal",
+        "liblog",
+    ],
+    header_libs: [
+        "bpf_prog_headers",
+        "bpf_headers",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ],
+    vendor: true
+}
+
+cc_binary {
+    name: "binderclient",
+    srcs: ["binderclient.cpp", "./com/example/IMyInterface.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "libbinder",
+        "libutils",
+    ],
+    
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ],
+    vendor: true
+}
+
+cc_binary {
+    name: "binderserver",
+    srcs: ["binderserver.cpp", "./com/example/IMyInterface.cpp"],
+    shared_libs: [
+        "libbase",
+         "libbinder_ndk",
+         "libbinder",
+        "libutils",
+    ],
+    
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ],
+    vendor: true
+}
