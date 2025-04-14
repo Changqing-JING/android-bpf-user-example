@@ -153,3 +153,21 @@ cc_binary {
     ],
     vendor: true
 }
+
+
+cc_binary {
+    name: "bindersurfaceflinger",
+    srcs: ["bindersurfaceflinger.cpp"],
+    shared_libs: [
+        "libbase",
+        "libbinder_ndk",
+        "libbinder",
+        "libutils",
+    ],
+    
+    cflags: [
+        "-Werror",
+        "-Wall",
+        "-Wextra",
+    ]
+}

@@ -7,7 +7,9 @@ PRODUCT_PACKAGES += \
     hello \
     bpflibhwuiuser \
     binderclient \
-    binderserver
+    binderserver \
+    bindersurfaceflinger
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
-    /system/bin/hello 
+    /system/bin/hello \
+    /system/bin/bindersurfaceflinger 
